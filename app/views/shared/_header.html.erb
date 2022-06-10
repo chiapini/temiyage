@@ -1,0 +1,27 @@
+<!doctype html>
+
+  <header class="p-3 bg-opacity-25 bg-warning">
+    <div class="container">
+      <div class="d-flex  align-items-center justify-content-center justify-content-lg-start">
+      
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto  justify-content-center mb-md-0">
+          <li><a href="/top" class="nav-link px-2 text-dark text-opacity-75">Home</a></li>
+          <li><a href="/tweets" class="nav-link px-2 text-dark text-opacity-75">Picup</a></li>
+          <li><a href="/information" class="nav-link px-2 text-dark text-opacity-75">Information</a></li>
+          <li><a href="/contacts/new" class="nav-link px-2 text-dark text-opacity-75">About</a></li>
+        </ul>
+
+
+        <div class="text-end">
+        <% if user_signed_in? %>
+        <a class="btn btn-outline-warning me-2" role="button" href= /users/sign_out method= delete  >ログアウト</a>
+         <% else %>
+         <a class="btn btn-outline-warning me-2" href= /users/sign_in role="button">ログイン</a>
+         <a class="btn btn-warning text-dark text-opacity-75 " href="/users/sign_up" role="button">新規登録</a>
+       <% end %>
+        </div>
+
+      </div>
+    </div>
+  </header>
