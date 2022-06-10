@@ -1,0 +1,24 @@
+<body>
+<%= render "shared/header" %>
+
+<div class = 'main2'>
+
+   <div class = registration_main >
+<div class = information_title> ユーザー登録時に頂いた情報を頼りに作成した統計データです。<br> 商品投稿の際などにご活用ください。 </div>
+<div class = information_box>
+   <%= pie_chart @users.group(:gender).count,title: "性別", colors: ["#FFABCE", "#A4C6FF","#FFAD90"]%>
+   <%= pie_chart @users.group(:situation).count, title: "家庭" , colors: ["#FFDEAD", "#B0E0E6"]%>
+</div>
+<div class = information_box>
+   <%= pie_chart @users.group(:children).count, title: "子供の有無" , colors: ["#FFB6C1", "#D2B48C"]%>
+  <%= pie_chart @users.group(:age_id).count, title: "年齢層", colors: ["#b00", "#666"] %>
+</div>
+   <%= pie_chart @users.group(:job_id).count, title: "職種" , colors: ["#b00", "#666"],donut: true%>
+   <%= bar_chart @users.group(:job_id).count,width: "400px", height: "300px"%>
+   <%= pie_chart @users.group(:think_id).count, title: "気持ち", colors: ["#b00", "#666"],donut: true  %>
+  <%= pie_chart @users.group(:area_id).count, title: "地域" , colors: ["#b00", "#666"],donut: true %>
+</div>
+  </div>
+
+<%= render "shared/footer" %>
+</body>

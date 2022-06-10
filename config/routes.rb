@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   end
   resources :contacts, only: [:new, :create]
   resources :tops, only: :index
-  resources :information, only: :index
+  resources :informations, only: :index
   resources :tweets do
     resource :favorites, only: [:create, :destroy]
   end
