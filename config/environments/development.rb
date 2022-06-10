@@ -46,6 +46,9 @@ Rails.application.configure do
     enable_starttls_auto: true
   }
 
+  host = 'samplehost'
+  Rails.application.routes.default_url_options[:host] = host
+
 
   config.action_mailer.perform_caching = false
 
