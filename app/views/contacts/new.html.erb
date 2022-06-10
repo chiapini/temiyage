@@ -1,0 +1,44 @@
+<body>
+<%= render "shared/header" %>
+
+ <%= form_with model: @contact, url: contacts_path ,local: true do |f| %> 
+
+<div class = main2>
+  <%= render 'shared/error_messages', model: @contact %>
+   <div class = registration_main >
+   <p class = registration_p>お問い合わせ</p>
+
+
+    <div class = field_box>
+     <label class = text>氏名<br>
+    <%= f.text_field :name,class: "field",placeholder:"例) 山田花子" %></label><br>
+
+    <%= f.collection_select(:opinion_id, Opinion.all, :id, :name, {}, {class:"collection"}) %><br>
+    <label class = text>お問い合わせ内容<br>
+    <%= f.text_area :contact_text,class: "opinion_box",placeholder:"＊平素より弊社サービスをご利用いただき、誠にありがとうございます。お客様から頂いたお問い合わせやご要望その他の情報は、弊社の更なるサービス向上に利用させていただきます。＊"%></label><br>
+
+
+
+    <br><p class = registration_p> ＊企業様へ＊<br> 投稿機能をお求めでしたら、こちらからご依頼ください。</p><br>
+    
+   <p class = opinion_p1 > ※    本人確認のため、在籍証明書の提出をお願い致しております。</p>
+
+    <p class = opinion_p>クリックして在籍証明書をアップロード</p>
+    <%= f.file_field :image,id:"item-image"%><br>
+
+     <br><p class = opinion_p> 1. お客様からいただいた個人情報は、当社の個人情報保護方針で定める利用目的の範囲内で使用いたします。 </p>
+     <p class = opinion_p> 2. 提出書類の確認が取れ次第、お客様のメールアドレス宛にご連絡させていただきます。</p>
+ 
+    
+
+     <%= f.submit "送信する" ,class:"register-btn"  %><br>
+</div>
+</div>
+
+ <% end %> 
+</div>
+</div>
+
+<%= render "shared/footer" %>
+
+</body>
