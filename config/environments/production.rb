@@ -90,6 +90,10 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
 
+  config.assets.raise_runtime_errors = true
+  config.action_mailer.perform_deliveries = true 
+  config.action_mailer.default_options = { from: ENV['EMAIL_ADDRESS'] }
+  config.action_mailer.default_url_options = { host: 'localhost:3000' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     address: 'smtp.gmail.com',
@@ -99,8 +103,10 @@ Rails.application.configure do
     authentication: 'plain',
     enable_starttls_auto: true
   }
+
   host = 'samplehost'
   Rails.application.routes.default_url_options[:host] = host
+
 
   # Inserts middleware to perform automatic connection switching.
   # The `database_selector` hash is used to pass options to the DatabaseSelector

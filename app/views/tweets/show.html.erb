@@ -80,18 +80,17 @@
       </tbody>
     </table>
 
-     <% if user_signed_in? && current_user.admin? && current_user == @tweet.user %>
+     <%# <% if user_signed_in? && current_user.admin? && current_user == @tweet.user %> 
        <div class = edit_box>
       <%=link_to '一覧ページへもどる', tweets_path, class:"show_btn" %>
       <%=link_to '編集', edit_tweet_path,method: :get, class:"show_btn" %>
       <%=link_to '削除', tweet_path,method: :delete,class:"show_btn" %>
       </div>
-      <% else %>
+      <%# <% else %> 
        <div class = show_box>
         <%=link_to '一覧ページへもどる', tweets_path, class:"show_btn" %>
       </div>
-     <% end %>
-
+     <%# <% end %> 
 
      
      </div>
