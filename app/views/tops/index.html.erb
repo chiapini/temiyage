@@ -1,0 +1,61 @@
+<%= render "shared/header" %>
+
+<div class = 'main2'>
+
+   <div class = registration_main >
+    <p class = registration_p>ようこそ、<%= @user.nickname %>さん</p>
+
+   <% if user_signed_in? && current_user.admin?  %>
+   <p class = top_p>＊　あなたは管理者権限をお持ちのため、商品記事の投稿が可能です。<br>下記のボタンから記事の投稿をして下さい。</p>
+   <%= link_to('/tweets/new',method: :get, class: 'top-btn2') do %>
+   <span>新規投稿はこちらから</span>
+   <% end %>
+   <% end %>
+
+  <p class = top_p>商品の一覧は下記のボタンからご覧頂けます。</p>
+   <%= link_to('/tweets',method: :get, class: 'top-btn') do %>
+   <span>商品を見る</span>
+   <% end %>
+
+
+  <p class = top_p2>記事投稿機能をお求めの方を含め、お問合せは下記のボタンからお願い致します。</p>
+  <%= link_to('/contacts/new',method: :get, class: 'top-btn') do %>
+   <span>お問い合わせはこちらから</span>
+   <% end %>
+   
+<p class = registration_p> 「いいね」を付けた投稿</p><br>
+
+
+   <% if @favorites_list.present? %>
+ <ul class = "tweet_boxs">
+     <% @favorites_list.each do |tweet| %>
+      <li class='tweet_box'>
+        <%= link_to tweet_path(tweet.id), class: "nav-link" do %>
+         <% if  tweet.event_id.present? %>
+            <p class = event_p>イベント限定商品</p>
+          <% end %>
+        <div class='tweet-content'>
+          <%= image_tag tweet.image, class: "tweet_image" %>
+        </div>
+
+        <div class='tweet-info'>
+          <p class='tweet_box_p'>
+            <%= tweet.item_name %><br>
+            ￥<%= tweet.price %>(税込)
+          </p>
+        </div>
+        <% end %>
+      </li>
+      <% end %>
+</div>
+    </ul> 
+    <% end %>
+
+
+
+   </div>
+
+ </div>
+
+
+<%= render "shared/footer" %>

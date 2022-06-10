@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   private
 
   def after_sign_in_path_for(_resource)
-    top_index_path
+    tops_path
   end
 
   def confiqure_permitted_parameters
