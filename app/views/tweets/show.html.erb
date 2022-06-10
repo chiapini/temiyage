@@ -1,0 +1,107 @@
+<body>
+<%= render "shared/header" %>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<div class = main2>
+
+ <%= form_with model: @tweet, href:"/tweets", class: 'registration_main',local: true do |f| %> 
+ 
+        <div class = show_box>
+
+        <div class = show_box2>
+        <% if current_user.already_favorite?(@tweet) %>
+          <%= link_to tweet_favorites_path(@tweet), method: :delete do%>
+           <i class="fa fa-heart fa-2x" aria-hidden="true"></i>
+          <% end %>
+          <% else %>
+          <%= link_to tweet_favorites_path(@tweet), method: :post do %>
+           <i class="fa fa-heart-o fa-2x" aria-hidden="true"></i><br>
+          <% end %> 
+          <% end %>
+
+
+        <% if  @tweet.event_id.present? %>
+            <p class = event_p2>イベント限定商品</p>
+          <% end %>
+        </div>
+        
+       <%= image_tag @tweet.image,class: "show_image"%>
+       <%= @tweet.item_name %> <br>
+       ￥<%= @tweet.price %>（税込）<br>
+       </div>  
+       <div class = show_information>
+        <%= @tweet.information %> 
+        </div>
+
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-item">ブランド名</th>
+          <td class="detail-value"><%= @tweet.shop_name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">カテゴリー</th>
+          <td class="detail-value"><%= @tweet.category.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">商品名</th>
+          <td class="detail-value"><%= @tweet.item_name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">個数</th>
+          <td class="detail-value"><%= @tweet.quantity %></td>
+        </tr>
+         <tr>
+          <th class="detail-item">内容量</th>
+          <td class="detail-value"><%= @tweet.capacity %></td>
+        </tr>
+         <tr>
+          <th class="detail-item">賞味期限</th>
+          <td class="detail-value"><%= @tweet.expiry %></td>
+        </tr>
+         <tr>
+          <th class="detail-item">保存方法</th>
+          <td class="detail-value"><%= @tweet.keep %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">アレルギー</th>
+          <td class="detail-value"><%= @tweet.allergy %></td>
+        </tr>
+
+        <tr>
+          <th class="detail-item">販売箇所</th>
+          <td class="detail-value"><%= @tweet.area %></td>
+        </tr>
+        <% if  @tweet.url.present? %>
+        <tr>
+          <th class="detail-item">ブランドHP</th>
+          <td class="detail-value"><%= @tweet.url %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+     <% if user_signed_in? && current_user.admin? && current_user == @tweet.user %>
+       <div class = edit_box>
+      <%=link_to '一覧ページへもどる', tweets_path, class:"show_btn" %>
+      <%=link_to '編集', edit_tweet_path,method: :get, class:"show_btn" %>
+      <%=link_to '削除', tweet_path,method: :delete,class:"show_btn" %>
+      </div>
+      <% else %>
+       <div class = show_box>
+        <%=link_to '一覧ページへもどる', tweets_path, class:"show_btn" %>
+      </div>
+     <% end %>
+
+
+     
+     </div>
+    </div>
+
+
+    <% end %> 
+
+
+
+<%= render "shared/footer" %>
+
+</body>

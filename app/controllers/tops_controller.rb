@@ -3,7 +3,7 @@ class TopsController < ApplicationController
 
   def index
     @user = current_user
-  #   favorites = Favorite.where(user_id: current_user.id).pluck(:tweet_id)
-  #   @favorites_list = Tweet.find(favorites)
+    favorites = Favorite.where(user_id: current_user.id).pluck(:tweet_id)
+    @favorites_list = Tweet.find(favorites)
   end
 end
