@@ -1,0 +1,48 @@
+<body>
+<%= render "shared/header" %>
+
+ <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+ 
+<div class = main2>
+<div class = registration_main >
+
+ <div class = search>
+     <%= form_tag({controller:"tweets",action:"index"}, method: :get, class: "search_box") do %>
+     <%= text_field_tag :search,'', placeholder: "キーワードから探す", class: "search-input" %>
+     <%= submit_tag "検索", class: "search-btn" %>
+     <% end %>
+</div>
+
+     <%= form_with model: @tweet, href:"/tweets", class: 'registration_main',local: true do |f| %> 
+
+
+     <ul class = "tweet_boxs">
+     <% @tweets.each do |tweet| %>
+      <li class='tweet_box'>
+        <%= link_to tweet_path(tweet.id), class: "nav-link" do %>
+         <% if  tweet.event_id.present? %>
+            <p class = event_p>イベント限定商品</p>
+          <% end %>
+        <div class='tweet-content'>
+          <%= image_tag tweet.image, class: "tweet_image" %>
+        </div>
+
+        <div class='tweet-info'>
+          <p class='tweet_box_p'>
+            <%= tweet.item_name %><br>
+            ￥<%= tweet.price %>(税込)
+          </p>
+        </div>
+        <% end %>
+      </li>
+      <% end %>
+</div>
+    </ul> 
+</div>
+
+ <% end %> 
+
+
+<%= render "shared/footer" %>
+
+</body>
