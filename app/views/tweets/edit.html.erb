@@ -1,0 +1,79 @@
+<body>
+<%= render "shared/header" %>
+
+ <%= form_with model: @tweet, id:"form",local: true do |f| %> 
+
+<div class = main2>
+  <%= render 'shared/error_messages', model: f.object %>
+   <div class = registration_main >
+   <p class = registration_p>商品情報</p>
+    <div class = field_box>
+    <p>クリックしてファイルをアップロード</p>
+    <%= f.file_field :image,id:"item-image"%><br>
+    <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"collection"}) %><br>
+    <label class = text>ブランド名<br>
+    <%= f.text_field :shop_name,class: "field",placeholder:"例) フィリップ・ジョエル", maxlength:"40" %></label><br>
+     <label class = text>商品の名前<br>
+    <%= f.text_field :item_name,class: "field",placeholder:"例)カヌレ 詰め合わせ", autofocus: true %></label><br>
+    <label class = text>商品PR<br>
+    <%= f.text_area :information,class: "field",placeholder:"＊500文字以下で入力して下さい＊",maxlength: 300 %></label><br>
+    <label class = text>販売箇所<br>
+    <%= f.text_area :area,class: "field",placeholder:"例)横浜丸光百貨店・銀座大倉ビル",maxlength: 300 %></label><br>
+     <label class = text >内容量<br>
+    <%= f.text_area :capacity,class: "field",placeholder:"例)プレーン、メイプル、かぼちゃ各１点づつ" %></label><br>
+     <label class = text >賞味期限<br>
+    <%= f.text_field :expiry,class: "field",placeholder:"例)製造から3日" %></label><br>
+    <label class = text >個数<br>
+    <%= f.text_field :quantity,class: "field",placeholder:"例)3個" %></label><br>
+    <label class = text >税込価格<br>
+    <%= f.text_field :price,class: "field",placeholder:"例)1300" %></label><br>
+    <label class = text >保存方法<br>
+    <%= f.text_field :keep,class: "field",placeholder:"例)常温" %></label><br>
+    <label class = text >アレルギー源<br>
+    <%= f.text_field :allergy,class: "field",placeholder:"例)小麦、卵、乳" %></label><br>
+    <label class = text >お店のURL<br>
+    <%= f.text_field :url,class: "field",placeholder:"＊必須ではありません＊" %></label><br>
+    <label>
+    <input type="checkbox" value="1" name="tweet[event_id]">
+    イベント限定商品</label>
+    </div>
+
+
+    <p class = registration_p>検索ワードを選択して下さい（複数可・任意）</p><br>
+    
+
+    <div calss = second_box>
+ 
+    <label><input type="checkbox" value="1" name="search_id[]">個包装</label>
+    <label><input type="checkbox" value="2" name="search_id[]">詰め合わせ</label>
+    <label><input type="checkbox" value="3" name="search_id[]">ギフト</label>
+    <label><input type="checkbox" value="4" name="search_id[]">プチギフト</label>
+    <label><input type="checkbox" value="5" name="search_id[]">のし紙・ラッピングサービス有り</label>
+    <label><input type="checkbox" value="6" name="search_id[]">季節限定商品</label>
+    <label><input type="checkbox" value="7" name="search_id[]">手作り</label> <br>
+    <label><input type="checkbox" value="8" name="search_id[]">長持ちする</label>
+    <label><input type="checkbox" value="9" name="search_id[]">日本進出</label>
+    <label><input type="checkbox" value="10" name="search_id[]">誕生日</label>
+    <label><input type="checkbox" value="11" name="search_id[]">上品</label>
+    <label><input type="checkbox" value="12" name="search_id[]">可愛い</label>
+    <label><input type="checkbox" value="13" name="search_id[]">男性向け</label>
+    <label><input type="checkbox" value="14" name="search_id[]">女性向け</label>
+    <label><input type="checkbox" value="15" name="search_id[]">老舗</label>
+    <label><input type="checkbox" value="16" name="search_id[]">お洒落</label>
+    </div>
+
+
+     <div class = edit_btn_box>
+     <%= f.submit "変更する" ,class:"register-btn"  %>
+      <%=link_to 'もどる', tweet_path(@tweet.id), class:"edit-btn" %>
+    </div><br>
+</div>
+</div>
+
+ <% end %> 
+</div>
+</div>
+
+<%= render "shared/footer" %>
+
+</body>

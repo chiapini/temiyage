@@ -5,12 +5,12 @@
    <div class = registration_main >
     <p class = registration_p>ようこそ、<%= @user.nickname %>さん</p>
 
-   <% if user_signed_in? && current_user.admin?  %>
+   <%# <% if user_signed_in? && current_user.admin?  %> 
    <p class = top_p>＊　あなたは管理者権限をお持ちのため、商品記事の投稿が可能です。<br>下記のボタンから記事の投稿をして下さい。</p>
    <%= link_to('/tweets/new',method: :get, class: 'top-btn2') do %>
    <span>新規投稿はこちらから</span>
    <% end %>
-   <% end %>
+   <%# <% end %> 
 
   <p class = top_p>商品の一覧は下記のボタンからご覧頂けます。</p>
    <%= link_to('/tweets',method: :get, class: 'top-btn') do %>
