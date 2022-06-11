@@ -2,7 +2,7 @@
 
 
 <div class = 'main2'>
-
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
  <%= form_with model: @user, url:user_session_path , class: 'registration_main', local: true do |f| %> 
   <%= render 'shared/error_messages', model: f.object %>
 
@@ -18,15 +18,15 @@
     <%= f.submit "ログイン"  ,class:"register-btn" %><br><br>
 
   <p class = registration_p>弊社サービスに関して</p>
-    <%# <%= image_tag 'sweet2.png' ,class: "sweet_image" %> 
-    弊社サビースは
-    様々な会社の商品比較をしたいけれど、比較までは行えない。
-    商品の紹介をしたいけれど、発信の場が限られている。より多くの消費者に伝えられる方法はないだろうか
-    そんな双方のお悩みを解決するべく、企業様と消費者とを繋ぐことを目的に作られたサービスです。
+  <div class = registration_text>
 
-    完全会員制とはなりますが、全ての機能を無料でお使いいただく事が出来ます。
+     弊社サビースは<span class="text0">『手土産選びを簡単に』</span>をコンセプトに、<br><br>
+     消費者側の<span class="text1">「様々な企業の商品比較をひとつのサイトで完結させたい」</span><br>
+     企業側の<span class="text1">「商品PRの場を増やしたい」</span><br><br>
+     そんな双方のお悩みを解決するべく、企業様と消費者とを繋ぐことを目的に作られたサービスです。<br><br>
+    ＊　完全会員制とはなりますが、全ての機能を<span class="text1">無料</span>でお使いいただく事が出来ます。<br><br>
+   <i class="fa fa-user-plus fa-2x" aria-hidden="true"> <a href="/users/sign_up" class="text2">まずは会員登録から</a></i> 
     </div>
-
 
   </div>
 <% end %>
