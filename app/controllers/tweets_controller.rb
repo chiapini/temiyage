@@ -1,6 +1,6 @@
 class TweetsController < ApplicationController
-  before_action :find_item, only: [:show, :destroy, :edit, :update]
-  before_action :authenticate_user!, only: [:index, :new, :show, :create, :edit, :destroy, :update]
+  before_action :find_item, only: %i[show destroy edit update]
+  before_action :authenticate_user!, only: %i[index new show create edit destroy update]
 
   def index
     @tweets = if params[:search].nil?
@@ -29,8 +29,7 @@ class TweetsController < ApplicationController
     @comments = @tweet.comments
   end
 
-  def edit
-  end
+  def edit; end
 
   def destroy
     @tweet.destroy

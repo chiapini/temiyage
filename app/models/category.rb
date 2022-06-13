@@ -7,7 +7,7 @@ class Category < ActiveHash::Base
     { id: 5, name: '焼菓子' },
     { id: 6, name: '米菓子' },
     { id: 7, name: 'チョコレート菓子' },
-    { id: 8, name: '冷菓' }, 
+    { id: 8, name: '冷菓' },
     { id: 9, name: '機能性菓子' }
   ]
 
