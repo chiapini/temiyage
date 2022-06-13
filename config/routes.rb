@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   resources :informations, only: :index
   resources :tweets do
     resource :favorites, only: [:create, :destroy]
+    resource :comments,  only: [:create]
   end
 end

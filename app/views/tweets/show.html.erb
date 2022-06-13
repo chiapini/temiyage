@@ -80,24 +80,101 @@
       </tbody>
     </table>
 
-     <%# <% if user_signed_in? && current_user.admin? && current_user == @tweet.user %> 
+     <% if user_signed_in? && current_user.admin? && current_user == @tweet.user %> 
        <div class = edit_box>
       <%=link_to '一覧ページへもどる', tweets_path, class:"show_btn" %>
       <%=link_to '編集', edit_tweet_path,method: :get, class:"show_btn" %>
       <%=link_to '削除', tweet_path,method: :delete,class:"show_btn" %>
       </div>
-      <%# <% else %> 
+      <% else %> 
        <div class = show_box>
         <%=link_to '一覧ページへもどる', tweets_path, class:"show_btn" %>
       </div>
-     <%# <% end %> 
-
-     
+     <% end %> 
      </div>
-    </div>
-
 
     <% end %> 
+
+  <div class = registration_main3>
+      <% if @comments.present?%>
+     <div class= "one1">口コミ一覧</div>
+
+    <div class= "second2">
+
+
+     <% @comments.each do |comment| %>
+
+      <div class = "first">
+
+       <div class = "two">
+         <%= comment.user.nickname %>　　　
+          <span id="star-rate-<%= comment.id %>"></span>
+          <script>
+          $('#star-rate-<%= comment.id %>').raty({
+            size: 36,
+            starOff:  '<%= asset_path('star-off.png') %>',
+            starOn : '<%= asset_path('star-on.png') %>',
+            starHalf: '<%= asset_path('star-half.png') %>',
+            half: true,
+            readOnly: true,
+            score: <%= comment.rate %>,
+          });
+          </script>
+        </div> 
+
+          <div class = "two2"><%= comment.scene.name %></div>
+          <div class = "two"> <%= comment.comment %></div>
+      </div>
+     <% end %>
+    </div>
+ </div>
+
+  <% else %>
+
+  <div class= "one1">口コミ一覧</div>
+    <div class= "second2">
+      まだ口コミはありません。
+     </div>
+   </div>
+
+  <% end %>
+  
+    </div>
+
+      <div class = registration_main2>
+      
+    <%= form_with(model:[@tweet,@comment],local: true) do |f| %>
+    <div class= "one">口コミを投稿する</div>
+    <div class= "second">
+    <%= f.collection_select(:scene_id, Scene.all, :id, :name, {}, {class:"collection"}) %><br> 
+
+    <div id="star">
+    <%= f.label :rate,'評価：　'%>
+    <%= f.hidden_field :rate, id: :review_star %>
+    </div>
+
+    <script>
+    $('#star').raty({
+    size     : 36,
+    starOff:  '<%= asset_path('star-off.png') %>',
+    starOn : '<%= asset_path('star-on.png') %>',
+    starHalf: '<%= asset_path('star-half.png') %>',
+    scoreName: 'comment[rate]',
+    half: true,
+    });
+    </script>  
+
+
+    <label class = text>口コミ<br>
+    <%= f.text_area :comment,class: "comment_box",placeholder:"＊500文字以内で入力して下さい＊",maxlength: 500 %></label><br>
+    <%= f.submit "送信する", class:"send" %>
+    </div>
+     <% end %>
+
+      </div>
+     </div>
+
+    
 
 
 

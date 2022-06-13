@@ -10,6 +10,8 @@ require("channels")
 import "chartkick/chart.js"
 import "bootstrap"
 import "../stylesheets/application"
+window.$ = window.jQuery = require('jquery'); 
+require('packs/raty') 
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference

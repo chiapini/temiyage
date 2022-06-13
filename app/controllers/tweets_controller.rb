@@ -25,6 +25,8 @@ class TweetsController < ApplicationController
 
   def show
     @favorite = Favorite.new
+    @comment = Comment.new
+    @comments = @tweet.comments
   end
 
   def edit
