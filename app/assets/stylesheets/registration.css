@@ -219,3 +219,11 @@ color:  #CD5C5C;
   margin-left: 10px;
 	background:linear-gradient(transparent 60%,	#FFFFBB 60%);
 }
+
+.second4{
+    border: solid  #DEB887 1px;
+    background-color: #FFFFF0;
+    height: 200px;
+    padding: 80px 40px;
+    text-align: center;
+}
