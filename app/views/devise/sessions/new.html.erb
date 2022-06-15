@@ -1,14 +1,21 @@
 <%= render "shared/header" %>
 
 
+
 <div class = 'main2'>
+
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
  <%= form_with model: @user, url:user_session_path , class: 'registration_main', local: true do |f| %> 
-  <%= render 'shared/error_messages', model: f.object %>
 
- <div class = registration_main >
 
   <p class = registration_p>ユーザーログイン</p>
+
+
+ <div class = registration_main >
+ <div class='login-flash-message'>
+    <%= flash[:notice] %>
+    <%= flash[:alert] %>
+  </div>
 
     <div class = field_box>
      <label class = text>メールアドレス<br>

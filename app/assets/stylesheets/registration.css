@@ -244,3 +244,14 @@ color:  #CD5C5C;
   font-size: 18px;
   color:	 #A0522D;
 }
+
+.error-message{
+  color: #FA8072;
+}
+
+.login-flash-message{
+  color: #FA8072;
+  text-align: center;
+  padding-bottom: 10px;
+  font-size: 18px;
+}

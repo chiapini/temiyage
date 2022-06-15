@@ -8,7 +8,6 @@
 
  <%= form_with model: @tweet, href:"/tweets", class: 'registration_main',local: true do |f| %> 
 
-
         <div class = show_box>
 
         <div class = show_box2>
@@ -151,6 +150,7 @@
       <div class = registration_main2>
       
     <%= form_with(model:[@tweet,@comment],local: true) do |f| %>
+  
     <div class= "one">口コミを投稿する</div>
     <div class= "second">
     <%= f.collection_select(:scene_id, Scene.all, :id, :name, {}, {class:"collection"}) %><br> 

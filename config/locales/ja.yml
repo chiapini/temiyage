@@ -1,0 +1,29 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        email: メールアドレス
+        nickname: ニックネーム
+        gender: 性別
+        situation: 状況
+        children: 子供の有無
+        age_id: 年齢
+        area_id: お住まいの地域
+        job_id: 職業
+        think_id: 現在の気持ち
+      tweet:
+        image: 商品画像
+        shop_name: ブランド名
+        item_name: 商品の名前
+        information: 商品PR
+        area: 販売箇所
+        capacity: 内容量
+        expiry: 賞味期限
+        keep: 保存方法
+        allergy: アレルギー源
+        quantity: 個数
+        price:  商品の税込価格
+        category_id: 商品カテゴリー
+      contact:
+        opinion_id: お問い合せ項目
+        name: 氏名
