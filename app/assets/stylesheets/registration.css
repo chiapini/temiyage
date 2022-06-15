@@ -183,11 +183,12 @@ color:  #CD5C5C;
   font-size: 20px;
   color: #555555;
   padding-top: 2px;
+
 }
 
 .registration_main3{
   background-color: #FFFFE0;
-  padding: 10px  300px;
+  padding: 50px  300px;
 }
 
 
@@ -226,4 +227,20 @@ color:  #CD5C5C;
     height: 200px;
     padding: 80px 40px;
     text-align: center;
+}
+
+.annonce{
+  font-size: 20px;
+  text-align: center;
+  color: #CD5C5C;
+}
+
+.fa-delicious {
+  color: #A0522D	;
+}
+
+.text3{
+  text-decoration: none;
+  font-size: 18px;
+  color:	 #A0522D;
 }
