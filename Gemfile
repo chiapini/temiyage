@@ -68,3 +68,4 @@ gem 'pry-rails'
 gem 'rails-i18n'
 gem "administrate"
 gem 'activeadmin'
+gem 'cancan'
