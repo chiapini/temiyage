@@ -3,22 +3,40 @@
 
 <div class = 'main2'>
 
-   <div class = registration_main >
+ <div class = registration_main >
+<div class = information_title> 手土産にまつわる豆知識です。<br> ご利用されるシーンに併せてご活用ください。 </div>
+
+<div class = information_box2>
+<p class = "title1"><i class="fa fa-lightbulb-o" aria-hidden="true"></i>　御供物選びのポイント<p><br>
+
+<span class = "title2">➀　消えものを選ぶ</span><br>
+お供え物は消費されてなくなるものがよいとされます。<br><br>
+
+<span class = "title2">	➁　個包装で、日持ちのするものを選ぶ</span><br>
+お供えした後に分けやすいものとして『個包装、常温、日持ちするもの』がよいとされます。<br><br>
+
+<span class = "title2">③　故人が好きだったものを選ぶ</span><br>
+故人が好きだったお酒やお菓子、果物などをお供えとして持って行くのも遺族に喜ばれます。
+</div>
+
+
 <div class = information_title> ユーザー登録時に頂いた情報を頼りに作成した統計データです。<br> 商品投稿の際などにご活用ください。 </div>
+
 <div class = information_box>
-   <%= pie_chart @users.group(:gender).count,title: "性別", colors: ["#FFABCE", "#A4C6FF","#FFAD90"]%>
-   <%= pie_chart @users.group(:situation).count, title: "家庭" , colors: ["#FFDEAD", "#B0E0E6"]%>
+   <%= pie_chart @gender_data,title: "性別", colors: ["#FFBEDA", "#BAD3FF","#FFC7AF"]%>
+   <%= pie_chart @situation_data, title: "家庭" , colors: ["#9BF9CC", "#E9FFA5"]%>
+   <%= pie_chart @children_data, title: "子供の有無" , colors: ["#FFB6C1", "#EAD9FF"]%>
+   <%= pie_chart @age_data, title: "年齢層", colors: ["#FFBEDA", "#FFC7AF","#B1F9D0","#C2EEFF","#BAD3FF","#DCC2FF"]%>
 </div>
-<div class = information_box>
-   <%= pie_chart @users.group(:children).count, title: "子供の有無" , colors: ["#FFB6C1", "#D2B48C"]%>
-  <%= pie_chart @users.group(:age_id).count, title: "年齢層", colors: ["#b00", "#666"] %>
+
+
 </div>
-   <%= pie_chart @users.group(:job_id).count, title: "職種" , colors: ["#b00", "#666"],donut: true%>
-   <%= bar_chart @users.group(:job_id).count,width: "400px", height: "300px"%>
-   <%= pie_chart @users.group(:think_id).count, title: "気持ち", colors: ["#b00", "#666"],donut: true  %>
-  <%= pie_chart @users.group(:area_id).count, title: "地域" , colors: ["#b00", "#666"],donut: true %>
 </div>
-  </div>
+
+
+
+
+
 
 <%= render "shared/footer" %>
 </body>

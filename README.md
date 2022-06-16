@@ -98,6 +98,7 @@ has_many :comments
 has_many :tweets
 has_many :favorites
 has_many :contacts
+has_many :locals
 
 
 # tweetsテーブル
@@ -156,6 +157,16 @@ belongs_to :user
  belongs_to :user
  belongs_to :tweet
 
+
+# Localテーブル
+|column        | type        |  Options                      |
+|--------------|-------------|-------------------------------|
+|user          |references   |null: false, foreign_key: true |
+|area_id       |integer      |null: false                    |
+
+
+## association
+belongs_to :user
 
 
 

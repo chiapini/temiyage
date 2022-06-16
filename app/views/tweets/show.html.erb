@@ -11,8 +11,9 @@
         <div class = show_box>
 
         <div class = show_box2>
-           <% if user_signed_in? %>
-        <% if current_user.already_favorite?(@tweet) %>
+         <% if user_signed_in? %>
+         <div class="favorite"><%= @favorite_count%></div>
+         <% if current_user.already_favorite?(@tweet) %>
           <%= link_to tweet_favorites_path(@tweet), method: :delete do%>
            <i class="fa fa-heart fa-2x" aria-hidden="true"></i>
           <% end %>
@@ -22,6 +23,7 @@
           <% end %> 
           <% end %>
         <% end %>
+
 
 
         <% if  @tweet.event_id.present? %>
