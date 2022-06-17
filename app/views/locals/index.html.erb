@@ -1,0 +1,59 @@
+<body>
+<%= render "shared/header" %>
+
+ <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+ 
+<div class = main2>
+
+<div class = registration_main >
+
+ <div class = search>
+
+     <%= form_tag({controller:"locals",action:"index"}, method: :get, class: "search_box") do %>
+     <%= text_field_tag :search,'', placeholder: "キーワードから探す", class: "search-input" %>
+     <%= submit_tag "検索", class: "search-btn" %>
+     <% end %>
+</div>
+
+
+     <%= form_with model: @local, href:"/locals", class: 'registration_main',local: true do |f| %> 
+     
+
+
+     <% if @locals.present? %>
+
+     <ul class = "tweet_boxs">
+     <% @locals.each do |local| %>
+      <li class='tweet_box'>
+        <%= link_to local_path(local.id), class: "nav-link" do %> 
+        <div class='tweet-content'>
+        <%= image_tag local.image, class: "tweet_image" %>
+        </div>
+        <div class='tweet-info'>
+        <p class='tweet_box_p'>
+        <%= local.shop_name %><br>
+        </p>
+        </div>
+        <% end %> 
+        </li>
+       <% end %>
+       </ul> 
+
+    <% else %>
+     <p class='local'> 投稿はまだありません。<br>
+     記事の投稿をしてみませんか？　</p>
+     </p>
+     <%= link_to('/locals/new',method: :get, class: 'local-btn') do %>
+   <span>投稿はこちらから</span>
+    <% end %> <br><br>
+
+    <% end %> 
+       </div>
+</div>
+    <% end %>
+    
+
+
+<%= render "shared/footer" %>
+
+</body>

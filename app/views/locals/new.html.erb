@@ -1,0 +1,41 @@
+<body>
+<%= render "shared/header" %>
+
+ <%= form_with model: @local, id:"form", url: locals_path ,local: true do |f| %> 
+
+<div class = main2>
+  <%= render 'shared/error_messages', model: f.object %> 
+  
+   <div class = registration_main >
+   <p class = local_p>お店の情報</p><br>
+    <div class = field_box>
+    <p>クリックしてファイルをアップロード<br>(画像は正方形のものを用意して下さい)</p>
+    <%= f.file_field :image,id:"item-image"%><br>
+    <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"collection"}) %><br>
+
+     <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"collection"}) %><br>
+      <%= f.collection_select(:area_id, Area.all, :id, :name, {}, {class:"collection"}) %><br>
+
+     
+    <label class = text>お店の名前<br>
+    <%= f.text_field :shop_name,class: "field",placeholder:"例) パティスリー　ハナコ", maxlength:"40" %></label><br>
+    
+
+   <label class = text>お店の紹介<br>
+    <%= f.text_area :information,class: "opinion_box",placeholder:"＊500文字以内でご記入ください＊",maxlength: 500%></label><br>
+
+
+ <p class = "local_box"><span class = local_p2>【注意】　誹謗中傷を目的とした書き込みは行わないでください。</span><br><br>地域情報に関するページは皆様のご協力のもとに成り立っております。<br>ご協力いただき誠にありがとうございます。</p>
+    <div class = btn_box>
+     <%= f.submit "投稿する" ,class:"local-btn2"  %><br>
+     </div>
+</div>
+</div>
+
+ <% end %> 
+</div>
+</div>
+
+<%= render "shared/footer" %>
+
+</body>

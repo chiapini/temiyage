@@ -1,6 +1,6 @@
 class Area < ActiveHash::Base
   self.data = [
-    { id: 1, name: 'お住まいの地域を選択して下さい' },
+    { id: 1, name: '地域を選択して下さい' },
     { id: 2, name: '北海道' },
     { id: 3, name: '青森県' },
     { id: 4, name: '岩手県' },
@@ -52,4 +52,5 @@ class Area < ActiveHash::Base
 
   include ActiveHash::Associations
   has_many :users
+  has_many :locals
 end

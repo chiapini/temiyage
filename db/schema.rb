@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_14_092450) do
+ActiveRecord::Schema.define(version: 2022_06_17_004454) do
 
   create_table "active_admin_comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "namespace"
@@ -90,6 +90,18 @@ ActiveRecord::Schema.define(version: 2022_06_14_092450) do
     t.index ["user_id"], name: "index_favorites_on_user_id"
   end
 
+  create_table "locals", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "shop_name", null: false
+    t.text "information", null: false
+    t.bigint "user_id", null: false
+    t.integer "area_id", null: false
+    t.integer "prefecture_id", null: false
+    t.integer "category_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_locals_on_user_id"
+  end
+
   create_table "tweets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "shop_name", null: false
     t.string "item_name", null: false
@@ -138,5 +150,6 @@ ActiveRecord::Schema.define(version: 2022_06_14_092450) do
   add_foreign_key "contacts", "users"
   add_foreign_key "favorites", "tweets"
   add_foreign_key "favorites", "users"
+  add_foreign_key "locals", "users"
   add_foreign_key "tweets", "users"
 end

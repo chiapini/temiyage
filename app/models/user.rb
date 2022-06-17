@@ -12,6 +12,7 @@ class User < ApplicationRecord
   has_many :favorites, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_many :contacts
+  has_many :locals, dependent: :destroy
 
   def already_favorite?(tweet)
     favorites.exists?(tweet_id: tweet.id)

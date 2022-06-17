@@ -1,0 +1,54 @@
+<body>
+<%= render "shared/header" %>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<div class = main2>
+
+ <%= form_with model: @local, href:"/locals", class: 'registration_main',local: true do |f| %> 
+
+        <div class = show_box>
+
+        
+       <%= image_tag @local.image,class: "show_image"%>
+       <%= @local.shop_name %> <br>
+       </div> 
+       <div class = show_information>
+
+        </div>
+
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-item">カテゴリー</th>
+          <td class="detail-value"><%= @local.category.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">地域</th>
+          <td class="detail-value"><%= @local.area.name%></td>
+        </tr>
+        <tr>
+          <th class="detail-item">紹介</th>
+          <td class="detail-value"> <%= @local.information %> </td>
+        </tr>
+      </tbody>
+    </table>
+
+     <% if user_signed_in? && current_user == @local.user %> 
+       <div class = edit_box>
+      <%=link_to '一覧ページへもどる', localtops_path, class:"show_btn" %>
+      <%=link_to '編集', edit_local_path,method: :get, class:"show_btn" %>
+      <%=link_to '削除', local_path,method: :delete,class:"show_btn" %>
+      </div>
+      <% else %> 
+       <div class = show_box>
+        <%=link_to '一覧ページへもどる', :back, class:"show_btn" %>
+      </div>
+     <% end %> 
+     </div>
+
+    <% end %> 
+
+
+
+<%= render "shared/footer" %>
+
+</body>

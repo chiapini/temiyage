@@ -163,6 +163,9 @@ belongs_to :user
 |--------------|-------------|-------------------------------|
 |user          |references   |null: false, foreign_key: true |
 |area_id       |integer      |null: false                    |
+|category_id   |integer      |null: false                    |
+|shop_name     |string       |null: false                    |
+|information   |text         |null: false                    |
 
 
 ## association

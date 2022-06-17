@@ -1,3 +1,51 @@
-// Place all the styles related to the locals controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.map{
+  margin: 80px 0;  
+}
+
+.local_p{
+  padding: 20px 0;
+  font-size: 20px;
+  color: #555555;
+  border: dashed 2px #FFC7AF;
+  width: 100%;
+  text-align: center;
+}
+
+
+
+.local_p2{
+  border-bottom: 2px double #FA8072;
+}
+
+.local-btn{
+  background-color: #CEF9DC;
+  border-style: dotted;
+  border-radius: 20px;
+  color:  #555555;
+  text-decoration: none;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  margin-left: 30%;
+  margin-bottom: 5%;
+}
+
+.local-btn2{
+  background-color: #CEF9DC;
+ margin-top: 50px;
+width: 200px;
+border-style: dotted;
+border-radius: 20px;
+color:  #555555;
+}
+
+.local_box{
+  text-align: center;
+  color:  #555555;
+}
+
+.local{
+  text-align: center;
+  color: #555555;
+  padding-bottom: 50px;
+}
