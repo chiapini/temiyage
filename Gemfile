@@ -57,16 +57,16 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
+gem 'activeadmin'
 gem 'active_hash'
+gem 'administrate'
+gem 'cancan'
 gem 'chartkick'
 gem 'devise'
 gem 'groupdate'
 gem 'image_processing', '~> 1.2'
+gem 'jcanvas-rails', '~> 0.1.0'
 gem 'jquery-rails'
 gem 'mini_magick'
 gem 'pry-rails'
 gem 'rails-i18n'
-gem "administrate"
-gem 'activeadmin'
-gem 'cancan'
-gem 'jcanvas-rails', '~> 0.1.0'

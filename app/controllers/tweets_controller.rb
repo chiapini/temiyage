@@ -1,6 +1,6 @@
 class TweetsController < ApplicationController
   before_action :find_item, only: %i[show destroy edit update]
-  before_action :authenticate_user!, only: %i[ new create edit destroy update]
+  before_action :authenticate_user!, only: %i[new create edit destroy update]
 
   def index
     @tweets = if params[:search].nil?

@@ -10,7 +10,7 @@ class Prefecture < ActiveHash::Base
     { id: 8, name: '中国地方' },
     { id: 9, name: '四国地方' },
     { id: 10, name: '九州地方' },
-    { id: 11, name: '沖縄地方' },
+    { id: 11, name: '沖縄地方' }
   ]
 
   include ActiveHash::Associations

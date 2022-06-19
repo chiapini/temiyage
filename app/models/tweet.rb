@@ -9,6 +9,6 @@ class Tweet < ApplicationRecord
   has_many :favorites, dependent: :destroy
   has_many :comments, dependent: :destroy
 
-   extend ActiveHash::Associations::ActiveRecordExtensions
-   belongs_to :category
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to :category
 end

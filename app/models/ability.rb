@@ -1,15 +1,15 @@
 # frozen_string_literal: true
 
- class Ability
-   include CanCan::Ability
+class Ability
+  include CanCan::Ability
 
-   def initialize(user)
-     # Define abilities for the passed in user here. For example:
-       if user && user.admin_flg?
-         can :access, :rails_admin
-         can :manage, :all
-       end
-    
+  def initialize(user)
+    # Define abilities for the passed in user here. For example:
+    if user && user.admin_flg?
+      can :access, :rails_admin
+      can :manage, :all
+    end
+
     #   user ||= User.new # guest user (not logged in)
     #   if user.admin?
     #     can :manage, :all
