@@ -1,23 +1,27 @@
-<body>
+<html>
+<head>
 <%= render "shared/header" %>
+<%# <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> %>
+<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+<%# <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css">  %>
+<script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> 
+</head>
 
+
+<body>
 <div class = 'main2'>
+
 
  <div class = registration_main >
 <div class = information_title> 手土産にまつわる豆知識です。<br> ご利用されるシーンに併せてご活用ください。 </div>
 
-<div class = information_box2>
-<p class = "title1"><i class="fa fa-lightbulb-o" aria-hidden="true"></i>　御供物選びのポイント<p><br>
+<%= javascript_include_tag 'slick.js' %>
+<div class= "slider" >
+   <%= image_tag 'information1' %>
+   <%= image_tag 'information2' %>
+  <%= image_tag 'information3' %>
+ </div>
 
-<span class = "title2">➀　消えものを選ぶ</span><br>
-お供え物は消費されてなくなるものがよいとされます。<br><br>
-
-<span class = "title2">	➁　個包装で、日持ちのするものを選ぶ</span><br>
-お供えした後に分けやすいものとして『個包装、常温、日持ちするもの』がよいとされます。<br><br>
-
-<span class = "title2">③　故人が好きだったものを選ぶ</span><br>
-故人が好きだったお酒やお菓子、果物などをお供えとして持って行くのも遺族に喜ばれます。
-</div>
 
 
 <div class = information_title> ユーザー登録時に頂いた情報を頼りに作成した統計データです。<br> 商品投稿の際などにご活用ください。 </div>
@@ -30,13 +34,12 @@
 </div>
 
 
+
+
 </div>
 </div>
-
-
-
-
-
 
 <%= render "shared/footer" %>
+
 </body>
+</html>

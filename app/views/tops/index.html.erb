@@ -2,6 +2,13 @@
 
 <div class = 'main2'>
 
+<%= link_to ('/localtops') do %>
+<div class="local_btn">
+<div class="local_btn2">地元の手土産に関して<br>投稿してみませんか？</div><br>
+<div  class="local_btn3"><i class="fa  fa-gift fa-4x" aria-hidden="true"></i></div>
+</div>
+<% end %>
+
    <div class = registration_main >
     <p class = registration_p>ようこそ、<%= @user.nickname %>さん</p>
 
@@ -47,15 +54,40 @@
         <% end %>
       </li>
       <% end %>
-</div>
     </ul> 
     <% end %>
 
+    <p class = registration_p> <%= @user.nickname %>さんが投稿した記事</p><br>
 
 
-   </div>
+   <% if @user.locals.present? %>
+      <ul class = "tweet_boxs">
+     <% @locals.each do |local| %>
+      <li class='tweet_box'>
+        <%= link_to local_path(local.id), class: "nav-link" do %>  
+        <div class='tweet-content'>
+          <%= image_tag local.image, class: "tweet_image" %>
+        </div>
 
- </div>
+        <div class='tweet-info'>
+          <p class='tweet_box_p'>
+            <%= local.shop_name %><br>
+          </p>
+        </div>
+        <% end %>
+      </li>
+      <% end %>
+       <% else %>
+        <p class = top_p>投稿した記事はありません。</p><br>
+</div>
+    </ul> 
+     <% end %> 
+
+
+
+
+</div>
+</div>
 
 
 <%= render "shared/footer" %>

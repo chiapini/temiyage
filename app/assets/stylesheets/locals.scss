@@ -49,3 +49,27 @@ color:  #555555;
   color: #555555;
   padding-bottom: 50px;
 }
+
+.local_btn{
+  background-color: #E0FFFF;
+  height: 200px;
+  width: 200px;
+  border-radius: 100%;
+  text-align: center;
+  position: fixed;
+  margin: 350px 0 0 900px;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ border: #87CEEB	 2px dotted;
+}
+
+.local_btn2{
+  padding-top: 35px;
+  color: #BC8F8F;
+}
+
+.fa-gift{
+ color: #D2B48C;
+}
+

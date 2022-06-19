@@ -32,14 +32,13 @@ end
    def create
      @local = Local.new(local_params)
      if @local.save
-       redirect_to locals_path
+       redirect_to localtops_path
      else
        render :new
      end
    end
 
   def show
-    #  @favorite = Favorite.new
    end
 
    def edit; end

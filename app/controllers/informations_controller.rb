@@ -15,8 +15,6 @@ class InformationsController < ApplicationController
     @age = User.pluck(:age_id)
     @age_data = agedata(@age)
 
-    @job = Job.find(User.group(:job_id).order('count(job_id) desc').limit(5).pluck(:job_id))
-    
   end
 
  
