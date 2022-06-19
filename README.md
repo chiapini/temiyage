@@ -1,5 +1,5 @@
 # アプリケーション名	
-Souvenir
+temiyage
 
 # アプリケーション概要	
 百貨店や駅中で売っているお菓子の商品比較、口コミ投稿が出来るサービス。
@@ -53,10 +53,10 @@ https://docs.google.com/spreadsheets/d/1K7auzkzqmgC6U4hb507OWcHREuf4qq9CoMg3jlpA
 洗い出した要件の中から、今後実装予定の機能がある場合は、その機能を記載。
 
  # データベース設計
- [![Image from Gyazo](https://i.gyazo.com/e6d153090db92dcd25d8b6c6199fb664.png)](https://gyazo.com/e6d153090db92dcd25d8b6c6199fb664)
+[![Image from Gyazo](https://i.gyazo.com/3b28524fd01bfaf8c08c83f03b5d894e.png)](https://gyazo.com/3b28524fd01bfaf8c08c83f03b5d894e)
 
  # 画面遷移図
- [![Image from Gyazo](https://i.gyazo.com/ffa0d89b157feb3bb049adb80a685189.png)](https://gyazo.com/ffa0d89b157feb3bb049adb80a685189)
+[![Image from Gyazo](https://i.gyazo.com/ec5a76a137b2fc1a03eb28ea34973438.png)](https://gyazo.com/ec5a76a137b2fc1a03eb28ea34973438)
 
 # 開発環境	
 使用した言語・サービスを記載。
