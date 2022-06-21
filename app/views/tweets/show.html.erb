@@ -1,5 +1,11 @@
-<body>
+<html>
+<head>
 <%= render "shared/header" %>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> 
+</head>
+
+<body>
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <div class = main2>
         <% unless  user_signed_in?  %>
@@ -31,15 +37,11 @@
           <% end %>
         </div>
         
-
+       <%= javascript_include_tag 'slick.js' %>
+       <div class= "slider" >
        <%= image_tag @tweet.images[0], class: "show_image" %>
-       <div class="other-images">
-       <% @tweet.images[1..-1].each do |image| %>
-       <div class="other-image">
-        <%= image_tag image %>
-        </div>
-        <%end%>
-        </div>
+       </div>
+
 
        
        <%= @tweet.item_name %> <br>
@@ -201,3 +203,4 @@
 <%= render "shared/footer" %>
 
 </body>
+</html>
