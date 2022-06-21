@@ -9,7 +9,14 @@
    <p class = registration_p>商品情報</p>
     <div class = field_box>
     <p>クリックしてファイルをアップロード<br>(画像は正方形のものを用意して下さい)</p>
-    <%= f.file_field :image,id:"item-image"%><br>
+
+    <div id="previews""></div><br>
+    
+
+    <div class="click-upload">
+    <%= f.file_field :images,name: 'tweet[images][]', data: {index: 0}  %><br>
+    </div><br>
+
     <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"collection"}) %><br>
     <label class = text>ブランド名<br>
     <%= f.text_field :shop_name,class: "field",placeholder:"例) フィリップ・ジョエル", maxlength:"40" %></label><br>

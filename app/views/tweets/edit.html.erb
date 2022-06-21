@@ -8,8 +8,9 @@
    <div class = registration_main >
    <p class = registration_p>商品情報</p>
     <div class = field_box>
-    <p>クリックしてファイルをアップロード</p>
-    <%= f.file_field :image,id:"item-image"%><br>
+    <p>クリックしてファイルをアップロード<br>(画像は正方形のものを用意して下さい)</p>
+    <div id="previews"></div>
+    <%= f.file_field :images,name: 'tweet[images][]', data: {index: 0},id:"item-image"%><br>
     <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"collection"}) %><br>
     <label class = text>ブランド名<br>
     <%= f.text_field :shop_name,class: "field",placeholder:"例) フィリップ・ジョエル", maxlength:"40" %></label><br>

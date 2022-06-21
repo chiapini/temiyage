@@ -31,7 +31,17 @@
           <% end %>
         </div>
         
-       <%= image_tag @tweet.image,class: "show_image"%>
+
+       <%= image_tag @tweet.images[0], class: "show_image" %>
+       <div class="other-images">
+       <% @tweet.images[1..-1].each do |image| %>
+       <div class="other-image">
+        <%= image_tag image %>
+        </div>
+        <%end%>
+        </div>
+
+       
        <%= @tweet.item_name %> <br>
        ￥<%= @tweet.price %>（税込）<br>
        </div>  

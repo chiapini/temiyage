@@ -42,7 +42,7 @@
             <p class = event_p>イベント限定商品</p>
           <% end %>
         <div class='tweet-content'>
-          <%= image_tag tweet.image, class: "tweet_image" %>
+            <%= image_tag tweet.images[0],class: "tweet_image" %>
         </div>
 
         <div class='tweet-info'>
@@ -55,6 +55,8 @@
       </li>
       <% end %>
     </ul> 
+     <% else %>
+        <p class = top_p>「いいね」を付けた投稿はありません。</p><br>
     <% end %>
 
     <p class = registration_p> <%= @user.nickname %>さんが投稿した記事</p><br>

@@ -12,6 +12,7 @@ import "bootstrap"
 import "../stylesheets/application"
 window.$ = window.jQuery = require('jquery'); 
 require('packs/raty') 
+require('../preview')
 
 
 

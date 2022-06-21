@@ -260,3 +260,40 @@ color:  #CD5C5C;
   color: #555555;
   font-size: 20px;
 }
+
+
+.preview-image{
+  size: 50%;
+  max-width: 200px;
+  max-height: 200px;
+}
+
+
+.image-delete-button{
+  background-color: #F0FFF0;
+  color: #555555;
+  text-align: center;
+  border: solid 1px;
+  cursor: pointer;
+  width: 200px;
+}
+
+
+
+
+
+
+
+.other-images {
+  display: flex;
+}
+
+.other-image {
+  margin-right: 10px;
+}
+
+
+.main-image {
+  height: 200px;
+  width: 200px;
+}

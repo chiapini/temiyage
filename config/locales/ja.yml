@@ -12,7 +12,7 @@ ja:
         job_id: 職業
         think_id: 現在の気持ち
       tweet:
-        image: 商品画像
+        images: 商品画像
         shop_name: ブランド名
         item_name: 商品の名前
         information: 商品PR
