@@ -64,15 +64,16 @@ https://docs.google.com/spreadsheets/d/1K7auzkzqmgC6U4hb507OWcHREuf4qq9CoMg3jlpA
 [![Image from Gyazo](https://i.gyazo.com/27250dc77d665ac00ae6ba803d9bd768.gif)](https://gyazo.com/27250dc77d665ac00ae6ba803d9bd768)
 3. 日本地図を用意しクリックした地域に絞って投稿が表示されるようにした
 [![Image from Gyazo](https://i.gyazo.com/a90dce94f261453393842e8eb864e59f.gif)](https://gyazo.com/a90dce94f261453393842e8eb864e59f)
-4. スライド形式で豆知識が表示されるようにした
+4. インフォメーションページと詳細ページにおいて、スライド形式で画像が表示されるようにした
 [![Image from Gyazo](https://i.gyazo.com/58000e91b04c2bc8912ab6fa8cc26a47.gif)](https://gyazo.com/58000e91b04c2bc8912ab6fa8cc26a47)
+[![Image from Gyazo](https://i.gyazo.com/7acf1f4b27760aac6c9c61777aab2e74.gif)](https://gyazo.com/7acf1f4b27760aac6c9c61777aab2e74)
+5. 記事投稿時に画像を複数枚選択できるようにし、選択した画像のプレビューも表示されるようにした
+[![Image from Gyazo](https://i.gyazo.com/699ca4666c16877092c811c53efeccbe.gif)](https://gyazo.com/699ca4666c16877092c811c53efeccbe)
 
 # 実装予定の機能	
 1. 検索機能の充実化<br>
 商品を様々な視点から比較出来るように、キーワードだけでなく商品の特徴や価格帯での検索を可能とする。
-2. 詳細ページに画像が複数枚表示されるようにする<br>
-投稿機能は完成している為、投稿された複数の画像をスライド式で全て表示出来るようにする。
-3. ランキングの表示<br>
+2. ランキングの表示<br>
 アンケート結果やいいね数でのランキングを表示する
 
  # データベース設計
@@ -82,7 +83,7 @@ https://docs.google.com/spreadsheets/d/1K7auzkzqmgC6U4hb507OWcHREuf4qq9CoMg3jlpA
 [![Image from Gyazo](https://i.gyazo.com/ec5a76a137b2fc1a03eb28ea34973438.png)](https://gyazo.com/ec5a76a137b2fc1a03eb28ea34973438)
 
 # 開発環境	
-Ruby,HTML,JavaScript,CSS
+Ruby / Ruby on Rails / MySQL / GitHub / Heroku / Visual Studio Code
 
 # ローカルでの動作方法
 ※	git cloneしてから、ローカルで動作をさせるまでに必要なコマンドを記載。

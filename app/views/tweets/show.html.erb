@@ -1,7 +1,9 @@
 <html>
 <head>
 <%= render "shared/header" %>
+
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> 
 </head>
 
@@ -39,7 +41,9 @@
         
        <%= javascript_include_tag 'slick.js' %>
        <div class= "slider" >
-       <%= image_tag @tweet.images[0], class: "show_image" %>
+       <% @tweet.images.each do |image| %>
+       <%= image_tag image, class: "show_image" %>
+       <% end %>
        </div>
 
 
