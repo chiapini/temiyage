@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   validates :nickname, :gender, :situation, :children, :age_id, :job_id, :area_id, :think_id, presence: true
   validates  :nickname, length: { maximum: 20 }
-  validates  :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i, message: 'には英字と数字の両方を含めて設定してください' }
+  # validates  :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i, message: 'には英字と数字の両方を含めて設定してください' }
   validates  :age_id, :job_id, :area_id, :think_id, numericality: { other_than: 1, message: 'を入力してください' }
 
   has_many :tweets, dependent: :destroy
