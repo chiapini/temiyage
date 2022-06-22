@@ -69,6 +69,8 @@ https://docs.google.com/spreadsheets/d/1K7auzkzqmgC6U4hb507OWcHREuf4qq9CoMg3jlpA
 [![Image from Gyazo](https://i.gyazo.com/7acf1f4b27760aac6c9c61777aab2e74.gif)](https://gyazo.com/7acf1f4b27760aac6c9c61777aab2e74)
 5. 記事投稿時に画像を複数枚選択できるようにし、選択した画像のプレビューも表示されるようにした
 [![Image from Gyazo](https://i.gyazo.com/699ca4666c16877092c811c53efeccbe.gif)](https://gyazo.com/699ca4666c16877092c811c53efeccbe)
+6. ActionMailerを用いたお問い合わせ機能の実装
+[![Image from Gyazo](https://i.gyazo.com/1902758fbcefd9822fcf3b018adc7fc6.gif)](https://gyazo.com/1902758fbcefd9822fcf3b018adc7fc6)
 
 # 実装予定の機能	
 1. 検索機能の充実化<br>
