@@ -62,6 +62,36 @@
         <p class = top_p>「いいね」を付けた投稿はありません。</p><br>
     <% end %>
 
+     <% if user_signed_in? && current_user.admin?  %>
+     <p class = registration_p> <%= @user.nickname %>さんが投稿した商品情報</p><br>
+
+
+   <% if @user.tweets.present? %>
+      <ul class = "tweet_boxs">
+     <% @user.tweets.each do |tweet| %>
+      <li class='tweet_box'>
+        <%= link_to tweet_path(tweet.id), class: "nav-link" do %>
+         <% if  tweet.event_id.present? %>
+            <p class = event_p>イベント限定商品</p>
+             <%= image_tag tweet.images[0],class: "tweet_image" %>
+          <% else %>
+        <div class='tweet-content'>
+         <p class = event_p3>通常商品</p>
+          <%= image_tag tweet.images[0],class: "tweet_image" %>
+        </div><br><br><br> 
+          <% end %>
+        <% end %>
+      </li>
+      <% end %>
+       <% else %>
+        <p class = top_p>投稿した商品情報はありません。</p><br> 
+</div>
+    </ul> <br> 
+     <% end %> 
+      <% end %>
+
+      
+
     <p class = registration_p> <%= @user.nickname %>さんが投稿した記事</p><br>
 
 
