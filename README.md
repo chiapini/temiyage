@@ -59,16 +59,16 @@ https://docs.google.com/spreadsheets/d/1K7auzkzqmgC6U4hb507OWcHREuf4qq9CoMg3jlpA
 
 # 実装した機能についての画像やGIFおよびその説明
 1. コメント投稿時に星付きの5段階評価を付けられるようにした
-[![Image from Gyazo](https://i.gyazo.com/7b7748a34aab83dbd1d01c57687a8cc5.gif)](https://gyazo.com/7b7748a34aab83dbd1d01c57687a8cc5)  
+[![Image from Gyazo](https://i.gyazo.com/bd572821bbdbb22b48473a622c0bb197.gif)](https://gyazo.com/bd572821bbdbb22b48473a622c0bb197)
 2. 投稿にいいねを付けられるようにし、いいね数を表示した他、いいねした投稿に関してはマイページに一覧として表示されるようにした
-[![Image from Gyazo](https://i.gyazo.com/27250dc77d665ac00ae6ba803d9bd768.gif)](https://gyazo.com/27250dc77d665ac00ae6ba803d9bd768)
+[![Image from Gyazo](https://i.gyazo.com/81991a055041e1e7162d1bcaeb2fec73.gif)](https://gyazo.com/81991a055041e1e7162d1bcaeb2fec73)
 3. 日本地図を用意しクリックした地域に絞って投稿が表示されるようにした
-[![Image from Gyazo](https://i.gyazo.com/a90dce94f261453393842e8eb864e59f.gif)](https://gyazo.com/a90dce94f261453393842e8eb864e59f)
+[![Image from Gyazo](https://i.gyazo.com/33fec0dae42bce05160e693822d0c5e5.gif)](https://gyazo.com/33fec0dae42bce05160e693822d0c5e5)
 4. インフォメーションページと詳細ページにおいて、スライド形式で画像が表示されるようにした
 [![Image from Gyazo](https://i.gyazo.com/58000e91b04c2bc8912ab6fa8cc26a47.gif)](https://gyazo.com/58000e91b04c2bc8912ab6fa8cc26a47)
-[![Image from Gyazo](https://i.gyazo.com/7acf1f4b27760aac6c9c61777aab2e74.gif)](https://gyazo.com/7acf1f4b27760aac6c9c61777aab2e74)
+[![Image from Gyazo](https://i.gyazo.com/30b06676594bc862e11df53031f216d1.gif)](https://gyazo.com/30b06676594bc862e11df53031f216d1)
 5. 記事投稿時に画像を複数枚選択できるようにし、選択した画像のプレビューも表示されるようにした
-[![Image from Gyazo](https://i.gyazo.com/699ca4666c16877092c811c53efeccbe.gif)](https://gyazo.com/699ca4666c16877092c811c53efeccbe)
+[![Image from Gyazo](https://i.gyazo.com/ae53119b8284e3e060e5fec160361fc1.gif)](https://gyazo.com/ae53119b8284e3e060e5fec160361fc1)699ca4666c16877092c811c53efeccbe)
 6. ActionMailerを用いたお問い合わせ機能の実装
 [![Image from Gyazo](https://i.gyazo.com/1902758fbcefd9822fcf3b018adc7fc6.gif)](https://gyazo.com/1902758fbcefd9822fcf3b018adc7fc6)
 

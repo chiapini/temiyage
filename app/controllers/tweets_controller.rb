@@ -4,7 +4,7 @@ class TweetsController < ApplicationController
 
   def index
     @tweets = if params[:search].nil?
-                Tweet.all
+                Tweet.all.order(created_at: :desc) 
               else
                 Tweet.where('item_name LIKE(?)', '%' + params[:search] + '%')
               end

@@ -22,10 +22,13 @@
         <%= link_to tweet_path(tweet.id), class: "nav-link" do %>
          <% if  tweet.event_id.present? %>
             <p class = event_p>イベント限定商品</p>
-          <% end %>
+             <%= image_tag tweet.images[0],class: "tweet_image" %>
+          <% else %>
         <div class='tweet-content'>
+         <p class = event_p3>通常商品</p>
           <%= image_tag tweet.images[0],class: "tweet_image" %>
         </div>
+           <% end %>
 
         <div class='tweet-info'>
           <p class='tweet_box_p'>
