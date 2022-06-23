@@ -81,6 +81,8 @@ https://docs.google.com/spreadsheets/d/1K7auzkzqmgC6U4hb507OWcHREuf4qq9CoMg3jlpA
 [![Image from Gyazo](https://i.gyazo.com/ae53119b8284e3e060e5fec160361fc1.gif)](https://gyazo.com/ae53119b8284e3e060e5fec160361fc1)
 6. 　ActionMailerを用いたお問い合わせ機能の実装。
 [![Image from Gyazo](https://i.gyazo.com/1902758fbcefd9822fcf3b018adc7fc6.gif)](https://gyazo.com/1902758fbcefd9822fcf3b018adc7fc6)
+7. 　エラーメッセージを日本語表記にした。
+[![Image from Gyazo](https://i.gyazo.com/434d7888847240162ebb6987ffdb037b.gif)](https://gyazo.com/434d7888847240162ebb6987ffdb037b)
 
 # 実装予定の機能	
 1. 検索機能の充実化<br>
