@@ -2,7 +2,7 @@
 temiyage
 
 # アプリケーション概要	
-百貨店や駅中で売っているお菓子の商品比較、口コミ投稿が出来るサービス。
+百貨店や駅中で売っている手土産の商品比較、口コミ投稿が出来るサービス。<br>
 地元の手土産に関して情報が共有できるサービス。
 
 # URL
@@ -46,12 +46,15 @@ https://temiyage.herokuapp.com/tops
 2. ページ下部に表示される日本地図から気になる地域をクリックする。
 3. 選択した地域に関する記事の一覧が表示される為、気になる投稿をクリックすると詳細を見る事が出来る。
 
+## ローカル記事を編集・削除する
+※ 「商品記事を編集・削除する（投稿権限を持つ者のみ）」に記載されている内容と全く同じ。
+
 # アプリケーションを作成した背景	
 当アプリケーションは2つの立場から考えて開発するに至った。
 
 １つ目は消費者側の立場である。
 私が洋菓子メーカーに勤めていた際、他社の商品研究をするにおいて情報収集に非常に苦戦した。
-まとめサイトには話題の商品しか載っておらず、企業HPには当たり前だがその企業の商品しか載っていないため他社商品との比較が出来ない、楽天やAmazonを例とする通販サイトで商品比較は可能だが、配送を基本としているため記載されていない商品も多かった。
+まとめサイトには話題の商品しか載っておらず、企業HPにはその企業の商品しか載っていないため他社商品との比較が出来ない。楽天やAmazonを例とする通販サイトで商品比較は可能だが、配送を基本としているため記載されていない商品も多かった。
 以上の経験から消費者側からしてみても、ひとつのサイトで様々な企業の商品比較ができるようなサービスがあったら良いと考えた。
 
 ２つ目は企業側の立場である。
@@ -64,25 +67,26 @@ https://temiyage.herokuapp.com/tops
 https://docs.google.com/spreadsheets/d/1K7auzkzqmgC6U4hb507OWcHREuf4qq9CoMg3jlpAuKk/edit?usp=sharing
 
 # 実装した機能についての画像やGIFおよびその説明
-1. コメント投稿時に星付きの5段階評価を付けられるようにした
+
+1.　 コメント投稿時に星付きの5段階評価を付けられるようにした。
 [![Image from Gyazo](https://i.gyazo.com/bd572821bbdbb22b48473a622c0bb197.gif)](https://gyazo.com/bd572821bbdbb22b48473a622c0bb197)
-2. 投稿にいいねを付けられるようにし、いいね数を表示した他、いいねした投稿に関してはマイページに一覧として表示されるようにした
+2. 　投稿にいいねを付けられるようにし、いいねの合計数を表示した他、いいねした投稿に関してはマイページに一覧として表示されるようにした。
 [![Image from Gyazo](https://i.gyazo.com/81991a055041e1e7162d1bcaeb2fec73.gif)](https://gyazo.com/81991a055041e1e7162d1bcaeb2fec73)
-3. 日本地図を用意しクリックした地域に絞って投稿が表示されるようにした
+3. 　日本地図を用意しクリックした地域に絞って投稿が表示されるようにした。
 [![Image from Gyazo](https://i.gyazo.com/33fec0dae42bce05160e693822d0c5e5.gif)](https://gyazo.com/33fec0dae42bce05160e693822d0c5e5)
-4. インフォメーションページと詳細ページにおいて、スライド形式で画像が表示されるようにした
+4. 　インフォメーションページと詳細ページにおいて、スライド形式で画像が表示されるようにした。
 [![Image from Gyazo](https://i.gyazo.com/58000e91b04c2bc8912ab6fa8cc26a47.gif)](https://gyazo.com/58000e91b04c2bc8912ab6fa8cc26a47)
 [![Image from Gyazo](https://i.gyazo.com/30b06676594bc862e11df53031f216d1.gif)](https://gyazo.com/30b06676594bc862e11df53031f216d1)
-5. 記事投稿時に画像を複数枚選択できるようにし、選択した画像のプレビューも表示されるようにした
+5. 　記事投稿時に画像を複数枚選択できるようにし、選択した画像のプレビューも表示されるようにした。
 [![Image from Gyazo](https://i.gyazo.com/ae53119b8284e3e060e5fec160361fc1.gif)](https://gyazo.com/ae53119b8284e3e060e5fec160361fc1)
-6. ActionMailerを用いたお問い合わせ機能の実装
+6. 　ActionMailerを用いたお問い合わせ機能の実装。
 [![Image from Gyazo](https://i.gyazo.com/1902758fbcefd9822fcf3b018adc7fc6.gif)](https://gyazo.com/1902758fbcefd9822fcf3b018adc7fc6)
 
 # 実装予定の機能	
 1. 検索機能の充実化<br>
 商品を様々な視点から比較出来るように、キーワードだけでなく商品の特徴や価格帯での検索を可能とする。
 2. ランキングの表示<br>
-アンケート結果やいいね数でのランキングを表示する
+アンケート結果やいいね数でのランキングを表示する。
 
  # データベース設計
 [![Image from Gyazo](https://i.gyazo.com/3b28524fd01bfaf8c08c83f03b5d894e.png)](https://gyazo.com/3b28524fd01bfaf8c08c83f03b5d894e)
@@ -94,13 +98,13 @@ https://docs.google.com/spreadsheets/d/1K7auzkzqmgC6U4hb507OWcHREuf4qq9CoMg3jlpA
 Ruby / Ruby on Rails / MySQL / GitHub / Heroku / Visual Studio Code
 
 # ローカルでの動作方法
-% git clone https://github.com/chiapini/temiyage.git 
-% cd temiyage
-% bundle install
+% git clone https://github.com/chiapini/temiyage.git <br>
+% cd temiyage <br>
+% bundle install <br>
 % yarn install
 
 # 工夫したポイント
-1. 会員登録時にアンケートを取り、その結果を企業側にグラフとして提供した点。 <br>
+1. 会員登録時にアンケートを取り、その結果をグラフとして提供した点。 <br>
 ユーザー情報を提供することで、企業側もよりユーザーの背景や想いに沿ったコンテンツが作れるのではないかと考えグラフを取り入れた。
 2. ビューの色合い<br>
 お菓子と言ったら可愛い印象だが、男性が仕事で使うことも考えるとあまり甘い雰囲気には出来ないと思った。
