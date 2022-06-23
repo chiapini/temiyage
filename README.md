@@ -9,7 +9,13 @@ temiyage
 https://temiyage.herokuapp.com/tops
 
 # テスト用アカウント	
-ログイン機能等を実装した場合は、ログインに必要な情報を記載。
+企業側テストユーザー
+メールアドレス：  test@gmail.com
+パスワード：  test1111
+
+一般側テストユーザー
+メールアドレス： sample@gmail.com
+パスワード： sample1111
 
 # 利用方法	
 ## 商品閲覧・いいね
