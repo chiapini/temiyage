@@ -46,11 +46,11 @@ https://temiyage.herokuapp.com/tops
 １つ目は消費者側の立場である。
 私が洋菓子メーカーに勤めていた際、他社の商品研究をするにおいて情報収集に非常に苦戦した。
 まとめサイトには話題の商品しか載っておらず、企業HPには当たり前だがその企業の商品しか載っていないため他社商品との比較が出来ない、楽天やAmazonを例とする通販サイトで商品比較は可能だが、配送を基本としているため記載されていない商品も多かった。
-以上の経験から消費者側からしてみても、ひとつのサイトで様々な企業の商品比較ができるようなサービスがあったら良いなと思った。
+以上の経験から消費者側からしてみても、ひとつのサイトで様々な企業の商品比較ができるようなサービスがあったら良いと考えた。
 
 ２つ目は企業側の立場である。
 私の働いていた洋菓子店は百貨店のインスタグラムで新商品の告知をしていたのだが、館のSNSでは食品だけでなく衣類やイベント情報なども扱うため、どうしてもPRが埋もれてしまいがちだった。
-また、小さな会社などは自社HPを作成及び運営するのが難しいうえ、作っても名が通っていないと中々見つけて貰えないという課題を抱えているように感じた。
+また、小さな会社では自社HPを作成及び運営するのが難しいうえ、作っても名が通っていないと中々見つけて貰えないという課題を抱えているように感じた。
 
 以上を踏まえて、消費者側の「様々な企業の商品比較をひとつのサイトで完結させたい」、企業側の「商品PRの場を増やしたい」といった双方の課題を解決するべく当アプリケーションを開発することにした。
 
@@ -68,7 +68,7 @@ https://docs.google.com/spreadsheets/d/1K7auzkzqmgC6U4hb507OWcHREuf4qq9CoMg3jlpA
 [![Image from Gyazo](https://i.gyazo.com/58000e91b04c2bc8912ab6fa8cc26a47.gif)](https://gyazo.com/58000e91b04c2bc8912ab6fa8cc26a47)
 [![Image from Gyazo](https://i.gyazo.com/30b06676594bc862e11df53031f216d1.gif)](https://gyazo.com/30b06676594bc862e11df53031f216d1)
 5. 記事投稿時に画像を複数枚選択できるようにし、選択した画像のプレビューも表示されるようにした
-[![Image from Gyazo](https://i.gyazo.com/ae53119b8284e3e060e5fec160361fc1.gif)](https://gyazo.com/ae53119b8284e3e060e5fec160361fc1)699ca4666c16877092c811c53efeccbe)
+[![Image from Gyazo](https://i.gyazo.com/ae53119b8284e3e060e5fec160361fc1.gif)](https://gyazo.com/ae53119b8284e3e060e5fec160361fc1)
 6. ActionMailerを用いたお問い合わせ機能の実装
 [![Image from Gyazo](https://i.gyazo.com/1902758fbcefd9822fcf3b018adc7fc6.gif)](https://gyazo.com/1902758fbcefd9822fcf3b018adc7fc6)
 
@@ -88,7 +88,10 @@ https://docs.google.com/spreadsheets/d/1K7auzkzqmgC6U4hb507OWcHREuf4qq9CoMg3jlpA
 Ruby / Ruby on Rails / MySQL / GitHub / Heroku / Visual Studio Code
 
 # ローカルでの動作方法
-※	git cloneしてから、ローカルで動作をさせるまでに必要なコマンドを記載。
+% git clone https://github.com/chiapini/temiyage.git 
+% cd temiyage
+% bundle install
+% yarn install
 
 # 工夫したポイント
 1. 会員登録時にアンケートを取り、その結果を企業側にグラフとして提供した点。 <br>
