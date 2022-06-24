@@ -1,5 +1,7 @@
 class LocalsController < ApplicationController
   before_action :find_local, only: %i[show destroy edit update]
+  before_action :authenticate_user!, only: %i[index new create edit update show destroy]
+  before_action :move_to_index, only: [:edit, :destroy]
 
   def index
     if params[:sort] == 'hokkaido'
@@ -66,4 +68,9 @@ class LocalsController < ApplicationController
   def find_local
     @local = Local.find(params[:id])
   end
+
+  def move_to_index
+    redirect_to localtops_path unless @local.user_id == current_user.id
+  end
+
 end

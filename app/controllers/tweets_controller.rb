@@ -1,6 +1,8 @@
 class TweetsController < ApplicationController
   before_action :find_item, only: %i[show destroy edit update]
   before_action :authenticate_user!, only: %i[new create edit destroy update]
+  before_action :move_to_index, only: [:edit, :destroy]
+  before_action :move_to_tops, only: [:new]
 
   def index
     @tweets = if params[:search].nil?
@@ -55,4 +57,13 @@ class TweetsController < ApplicationController
   def find_item
     @tweet = Tweet.find(params[:id])
   end
+
+  def move_to_index
+    redirect_to tweets_path unless @tweet.user_id == current_user.id
+  end
+
+  def move_to_tops
+    redirect_to tops_path unless current_user.admin
+  end
+
 end
