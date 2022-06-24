@@ -34,4 +34,9 @@ ja:
         shop_name: お店の名前
         information: お店の紹介
         prefecture_id: 地方
+      comment:
+        comment: 口コミ
+        rate: 評価
+        scene_id: 使用したシーン
+      
         

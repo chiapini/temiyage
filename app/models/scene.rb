@@ -11,7 +11,7 @@ class Scene < ActiveHash::Base
     { id: 9, name: 'バレンタイン・ホワイトデー' },
     { id: 10, name: 'お祝い事' },
     { id: 11, name: '御供物として利用' },
-    { id: 12, name: '自分へのご褒美' },
+    { id: 12, name: '自分へのご褒美' }
   ]
 
   include ActiveHash::Associations

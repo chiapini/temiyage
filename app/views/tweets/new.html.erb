@@ -19,11 +19,11 @@
 
     <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"collection"}) %><br>
     <label class = text>ブランド名<br>
-    <%= f.text_field :shop_name,class: "field",placeholder:"例) フィリップ・ジョエル", maxlength:"40" %></label><br>
+    <%= f.text_field :shop_name,class: "field",placeholder:"例) フィリップ・ジョエル" %></label><br>
      <label class = text>商品の名前<br>
     <%= f.text_field :item_name,class: "field",placeholder:"例)カヌレ 詰め合わせ", autofocus: true %></label><br>
     <label class = text>商品PR<br>
-    <%= f.text_area :information,class: "field",placeholder:"＊500文字以下で入力して下さい＊",maxlength: 300 %></label><br>
+    <%= f.text_area :information,class: "field",placeholder:"＊500文字以下で入力して下さい＊",maxlength: 500 %></label><br>
     <label class = text>販売箇所<br>
     <%= f.text_area :area,class: "field",placeholder:"例)横浜丸光百貨店・銀座大倉ビル",maxlength: 300 %></label><br>
      <label class = text >内容量<br>

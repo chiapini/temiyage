@@ -60,6 +60,7 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'activeadmin'
 gem 'active_hash'
 gem 'administrate'
+gem 'aws-sdk-s3', require: false
 gem 'cancan'
 gem 'chartkick'
 gem 'devise'
@@ -70,4 +71,3 @@ gem 'jquery-rails'
 gem 'mini_magick'
 gem 'pry-rails'
 gem 'rails-i18n'
-gem "aws-sdk-s3", require: false

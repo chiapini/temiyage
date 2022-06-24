@@ -4,6 +4,8 @@ class Tweet < ApplicationRecord
 
   validates :category_id, numericality: { other_than: 1, message: 'を入力してください' }
   validates :price, numericality: { with: /\A[0-9]+\z/, message: 'は半角数値で設定してください' }
+  validates :information, length: { maximum: 500, message: 'は500文字以内で入力してください' }
+
   has_many_attached :images
   belongs_to :user
   has_many :favorites, dependent: :destroy
