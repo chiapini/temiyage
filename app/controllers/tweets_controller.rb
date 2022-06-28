@@ -5,11 +5,14 @@ class TweetsController < ApplicationController
   before_action :move_to_tops, only: [:new]
 
   def index
-    @tweets = if params[:search].nil?
-                Tweet.all.order(created_at: :desc)
-              else
-                Tweet.where('item_name LIKE(?)', '%' + params[:search] + '%')
-              end
+    # @tweets = if params[:search].nil?
+    #             Tweet.all.order(created_at: :desc)
+    #           else
+    #             Tweet.where('item_name LIKE(?)', '%' + params[:search] + '%')
+    #           end
+
+    @q = Tweet.ransack(params[:q])
+    @tweets = @q.result
   end
 
   def new

@@ -18,11 +18,13 @@ RSpec.describe 'ユーザー新規登録', type: :system do
       fill_in 'user_email', with: @user.email
       fill_in 'user_password', with: @user.password
       fill_in 'user_password_confirmation', with: @user.password_confirmation
-
-      select '年齢を選択して下さい', from: 'user[age_id]'
-      select '職業を選択して下さい', from: 'user[job_id]'
-      select '地域を選択して下さい', from: 'user[area_id]'
-      select '現在の気持ちに最も近いものを選択して下さい', from: 'user[think_id]'
+      choose "user_gender_3"
+      choose "user_situation_1"
+      choose "user_children_2"
+      select '20代', from: 'user[age_id]'
+      select '公務員', from: 'user[job_id]'
+      select '沖縄県', from: 'user[area_id]'
+      select '話題のお菓子が知りたい', from: 'user[think_id]'
 
       # サインアップボタンを押すとユーザーモデルのカウントが1上がることを確認する
       expect do
@@ -51,13 +53,7 @@ RSpec.describe 'ユーザー新規登録', type: :system do
       fill_in 'user_email', with: ''
       fill_in 'user_password', with: ''
       fill_in 'user_password_confirmation', with: ''
-      fill_in 'user[gender]', with: ''
-      fill_in 'user_situation', with: ''
-      fill_in 'user_children', with: ''
-      fill_in 'user_area_id', with: ''
-      fill_in 'user_job_id', with: ''
-      fill_in 'user_age_id', with: ''
-      fill_in 'user_think_id', with: ''
+
       # サインアップボタンを押してもユーザーモデルのカウントは上がらないことを確認する
       expect  do
         find('input[name="commit"]').click
