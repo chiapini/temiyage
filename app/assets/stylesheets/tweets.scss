@@ -150,23 +150,12 @@
   color: #D2691E;
 }
 
-.search-input{
-  width: 500px;
-  margin: 40px 0px;
-  border: #FFA500 double;
-}
-
-.search-btn{
-  background-color: #FFC7AF;
-  color: #666666;
-  border: double white 3px;
-}
-
 .search{
   border: dashed 2px #FFC7AF;
   width: 100%;
   text-align: center;
   margin-bottom: 50px;
+  color: #555555;
 }
 
 .slider div {
@@ -187,3 +176,30 @@
   text-align: center;
 }
 
+.search-input{
+  width: 500px;
+  margin: 50px 0 20px;
+  border: #FFA500 double;
+  color: #555555;
+}
+
+.price-box{
+  width: 150px;
+  border: #FFA500 double;
+  color: #555555;
+}
+
+.category-box{
+  width: 300px;
+  border: #CCCC00 double;
+  margin: 0 0 20px;
+  color: #555555;
+}
+
+.search-btn{
+  background-color: #FFC7AF;
+  color: #666666;
+  border: double white 3px;
+  margin: 20px 0;
+  width: 100px;
+}
