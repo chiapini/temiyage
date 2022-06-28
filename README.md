@@ -83,10 +83,12 @@ https://docs.google.com/spreadsheets/d/1K7auzkzqmgC6U4hb507OWcHREuf4qq9CoMg3jlpA
 [![Image from Gyazo](https://i.gyazo.com/1902758fbcefd9822fcf3b018adc7fc6.gif)](https://gyazo.com/1902758fbcefd9822fcf3b018adc7fc6)
 7. 　エラーメッセージを日本語表記にした。
 [![Image from Gyazo](https://i.gyazo.com/434d7888847240162ebb6987ffdb037b.gif)](https://gyazo.com/434d7888847240162ebb6987ffdb037b)
+8. 　検索機能の充実化（価格帯・カテゴリー別での検索を可能とした）
+[![Image from Gyazo](https://i.gyazo.com/72578f55bedc92de850f449acb919123.gif)](https://gyazo.com/72578f55bedc92de850f449acb919123)
 
 # 実装予定の機能	
 1. 検索機能の充実化<br>
-商品を様々な視点から比較出来るように、キーワードだけではなく商品の特徴や価格帯での検索も可能にしたい。
+ある程度充実させる事は出来たが、のしの有無だったりプレゼント包装の可否だったり細かなタグ付け検索も可能としたい。
 2. ランキングの表示<br>
 投稿数が増えてくると一覧ページも見辛くなってきてしまうと思う為、口コミ数やいいね数でのランキング結果も提供したい。
 
