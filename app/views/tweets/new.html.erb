@@ -45,27 +45,16 @@
     イベント限定商品</label>
     </div>
 
-    <p class = registration_p>検索ワードを選択して下さい（複数可・任意）</p><br>
+    <p class = registration_p>検索ワードを選択して下さい（複数可・最低１つ）</p><br>
 
-<div calss = second_box>
-
-    <label><input type="checkbox" value="1" name="search_id[]">個包装</label>
-    <label><input type="checkbox" value="2" name="search_id[]">詰め合わせ</label>
-    <label><input type="checkbox" value="3" name="search_id[]">ギフト</label>
-    <label><input type="checkbox" value="4" name="search_id[]">プチギフト</label>
-    <label><input type="checkbox" value="5" name="search_id[]">のし紙・ラッピングサービス有り</label>
-    <label><input type="checkbox" value="6" name="search_id[]">季節限定商品</label>
-    <label><input type="checkbox" value="7" name="search_id[]">手作り</label> <br>
-    <label><input type="checkbox" value="8" name="search_id[]">長持ちする</label>
-    <label><input type="checkbox" value="9" name="search_id[]">日本進出</label>
-    <label><input type="checkbox" value="10" name="search_id[]">誕生日</label>
-    <label><input type="checkbox" value="11" name="search_id[]">上品</label>
-    <label><input type="checkbox" value="12" name="search_id[]">可愛い</label>
-    <label><input type="checkbox" value="13" name="search_id[]">男性向け</label>
-    <label><input type="checkbox" value="14" name="search_id[]">女性向け</label>
-    <label><input type="checkbox" value="15" name="search_id[]">老舗</label>
-    <label><input type="checkbox" value="16" name="search_id[]">お洒落</label>
-    </div>
+<div class="tag">
+    <% %w(個包装 詰め合わせ ギフト プチギフト のし紙可 ラッピングサービス可 季節限定 手作り 日持ちする  仏事 日本進出 誕生日 目上の人向け ビジネス 上品 可愛い 男性向け 女性向け 老舗 お洒落 高級感).each.with_index do |search_id,i| %>
+    <label>
+      <%= f.check_box  :search_id, {multiple: true}, search_id, nil %>
+      <%= search_id %>
+    </label>
+    <% end %>
+  </div>
 
 
     <div class = btn_box>
