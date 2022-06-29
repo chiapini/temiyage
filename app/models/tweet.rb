@@ -1,5 +1,5 @@
 class Tweet < ApplicationRecord
-  validates :images, :shop_name, :item_name, :information, :area, :capacity, :expiry, :keep, :allergy, :quantity, :category_id, :price, :user,
+  validates :images, :shop_name, :item_name, :information, :area, :capacity, :expiry, :keep, :allergy, :quantity, :category_id, :price, :user, :search_id,
             presence: true
 
   validates :category_id, numericality: { other_than: 1, message: 'を入力してください' }
