@@ -17,7 +17,7 @@
           <%= f.number_field :price_gteq, placeholder: "¥ Min",class: "price-box" %>　〜　
           <%= f.number_field :price_lteq, placeholder: "¥ Max",class: "price-box"  %><br>
 
-          <% %w(個包装 詰め合わせ ギフト プチギフト のし紙可 ラッピングサービス可 季節限定 手作り 日持ちする  仏事 日本進出 誕生日 目上の人向け ビジネス 上品 可愛い 男性向け 女性向け 老舗 お洒落 高級感).each.with_index %>
+
           <%= f.submit '検索', class: "search-btn"%>　<%=link_to 'リセット', tweets_path, class:"reset-btn" %>
           <% end %>
          </div>
