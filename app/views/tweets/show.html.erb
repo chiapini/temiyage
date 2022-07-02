@@ -147,6 +147,10 @@
 
           <div class = "two2"><%= comment.scene.name %></div>
           <div class = "two"> <%= comment.comment %></div>
+               <%=link_to '編集', edit_tweet_path,method: :get, class:"show_btn" %>
+
+      <%=link_to '削除', tweet_comments_path(@tweet,@comment),method: :delete,class:"show_btn" %>
+
       </div>
      <% end %>
     </div>

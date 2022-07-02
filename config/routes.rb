@@ -12,6 +12,6 @@ Rails.application.routes.draw do
   resources :localtops, only: :index
   resources :tweets do
     resource :favorites, only: %i[create destroy]
-    resource :comments,  only: [:create]
+    resource :comments,  only: [:create,:destroy]
   end
 end

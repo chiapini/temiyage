@@ -9,9 +9,13 @@ class CommentsController < ApplicationController
   def edit; end
 
   def destroy
+    tweet = Tweet.find(params[:tweet_id])
+    @comment = tweet.comments.find(params[:id])
     @comment.destroy
-    redirect_to tweets_path
+    render "tweet/show"
   end
+
+
 
   def update
     if @comment.update(comment_params)
