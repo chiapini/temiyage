@@ -8,7 +8,7 @@ class CommentsController < ApplicationController
 
   def destroy
     tweet = Tweet.find(params[:tweet_id])
-    @comment = tweet.comments.find(params[:id])
+    @comment = tweet.comments.find(params[:comment_id])
     @comment.destroy
     render "tweet/show"
   end
