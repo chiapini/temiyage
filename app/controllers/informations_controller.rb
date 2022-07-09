@@ -14,6 +14,14 @@ class InformationsController < ApplicationController
 
     @age = User.pluck(:age_id)
     @age_data = agedata(@age)
+
+
+    @job_ranks = User.group(:job_id).order('count(job_id) desc').limit(3).pluck(:job_id)
+
+    @area_ranks = User.group(:area_id).order('count(area_id) desc').limit(3).pluck(:area_id)
+   
+    @think_ranks = User.group(:think_id).order('count(think_id) desc').limit(3).pluck(:think_id)
+
   end
 
   private
