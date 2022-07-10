@@ -6,11 +6,11 @@ class CommentsController < ApplicationController
     redirect_to tweet_path(params[:tweet_id])
   end
 
-  def destroy
-    @comment = Comment.find(params[:id])
-    @comment.destroy
-    render "tweet/show"
-  end
+  # def destroy
+  #   @comment = Comment.find(params[:id])
+  #   @comment.destroy
+  #   render "tweet/show"
+  # end
 
   private
 

@@ -18,6 +18,8 @@ class InformationsController < ApplicationController
 
     @job_ranks = User.group(:job_id).order('count(job_id) desc').limit(3).pluck(:job_id)
 
+    @job_ranks_name = User.joins(:job).group("jobs.name").order('count_all DESC').limit(3).count.to_a
+
     @area_ranks = User.group(:area_id).order('count(area_id) desc').limit(3).pluck(:area_id)
    
     @think_ranks = User.group(:think_id).order('count(think_id) desc').limit(3).pluck(:think_id)

@@ -32,7 +32,8 @@
 </div>
 
 
- <%= @job_ranks.each do %>
+ <%= @job_ranks.each.with_index(1) do |job_id, i| %>
+   <div>第 i 位 </div>
  <% end %>
  
  <%= @area_ranks.each do %>

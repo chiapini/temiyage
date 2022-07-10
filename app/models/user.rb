@@ -18,5 +18,8 @@ class User < ApplicationRecord
   end
 
   extend ActiveHash::Associations::ActiveRecordExtensions
-  belongs_to :area, :job, :age, :think
+  belongs_to :area
+  belongs_to :job
+  belongs_to :age
+  belongs_to :think
 end
