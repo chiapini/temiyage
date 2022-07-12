@@ -17,8 +17,7 @@ class InformationsController < ApplicationController
 
 
     @job_ranks = User.group(:job_id).order('count(job_id) desc').limit(3).pluck(:job_id)
-
-    @job_ranks_name = User.joins(:job).group("jobs.name").order('count_all DESC').limit(3).count.to_a
+    @job_ranks_name = Job.find_by_id([12,10]).name
 
     @area_ranks = User.group(:area_id).order('count(area_id) desc').limit(3).pluck(:area_id)
    
