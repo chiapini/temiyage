@@ -16,14 +16,14 @@ class InformationsController < ApplicationController
     @age_data = agedata(@age)
 
 
-    @job_ranks = User.group(:job_id).order('count(job_id) desc').limit(3).pluck(:job_id)
+    @job_ranks = User.group(:job_id).order('count(job_id) desc').limit(1).pluck(:job_id)
     @jobdata = jobdata(@job_ranks)
 
 
-    @area_ranks = User.group(:area_id).order('count(area_id) desc').limit(3).pluck(:area_id)
+    @area_ranks = User.group(:area_id).order('count(area_id) desc').limit(1).pluck(:area_id)
     @areadata = areadata(@area_ranks)
    
-    @think_ranks = User.group(:think_id).order('count(think_id) desc').limit(3).pluck(:think_id)
+    @think_ranks = User.group(:think_id).order('count(think_id) desc').limit(1).pluck(:think_id)
     @thinkdata = thinkdata(@think_ranks)
 
   end
