@@ -31,13 +31,20 @@
    <%= pie_chart @age_data, title: "年齢層", colors: ["#FFBEDA", "#FFC7AF","#B1F9D0","#C2EEFF","#BAD3FF","#DCC2FF"]%>
 </div>
 
+<div class = ranking>
+<div class = ranking1>
+<i class="fa fa-trophy" aria-hidden="true">　職業ランキング</i><br>
+  <%= @job_ranks_name%><br><br>
 
- <%= @job_ranks%>
-  <%= @job_ranks_name%>
- 
- <%= @area_ranks%>
+<i class="fa fa-trophy" aria-hidden="true">　地域ランキング</i><br>
+   <%= @area_ranks_name%><br><br>
+</div>
+<div class = ranking2>
+<i class="fa fa-trophy" aria-hidden="true">　手土産選びに対する感情</i><br>
+  <%= @think_ranks_name%><br><br>
+</div>
+</div>
 
-  <%= @think_ranks%>
 
 </div>
 </div>
