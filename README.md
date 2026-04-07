@@ -62,9 +62,7 @@ https://temiyage.herokuapp.com/tops
 さらに、小規模企業では自社HPの作成・運営が困難であり、作っても知名度が低いと情報が届きにくいという課題もある。
 
 3.　 開発の目的<br>
-消費者側の「複数企業の商品比較を一つのサイトで完結させたい」、
-<br>企業側の「商品PRの場を増やしたい」という双方のニーズを満たすため、
-<br>当アプリケーションを開発した。
+消費者側の「複数企業の商品比較を一つのサイトで完結させたい」、企業側の「商品PRの場を増やしたい」という双方のニーズを満たすため、当アプリケーションを開発した。
 
 # 洗い出した要件	
 https://docs.google.com/spreadsheets/d/1K7auzkzqmgC6U4hb507OWcHREuf4qq9CoMg3jlpAuKk/edit?usp=sharing
